@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #D4AF37; /* Gold */
+  --color-secondary: #F5F5DC; /* Beige */
+  --color-dark: #111111; /* Almost Black */
+  --color-light: #FAFAFA; /* Off White */
+  --color-pink: #FFB6C1; /* Soft Pink */
+  --color-pink-light: #FFC0CB;
+  --color-pink-dark: #FF69B4;
+
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #FAFAFA;
+  --foreground: #111111;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #FAFAFA;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Luxury Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B3912C;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 17, 17, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
